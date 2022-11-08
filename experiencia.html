@@ -1,0 +1,180 @@
+<!--
+  Nombre: Antón López Álvarez
+  Fecha: 24/oct/2022
+  Módulo: LMSGI
+  UD: LMSGI01
+  Tarea: Tarea evaluativa 2. Primer sitio web con formato (50%)
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Cabecera -->
+    <meta charset="utf-8">
+    <meta name="description" content="CV web de Antón López">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS: Uso del fichero .css. -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Antón López - Experiencia laboral y académica</title>
+  </head>
+
+  <body>
+    <!-- Cuerpo -->
+
+    <!--
+      HTML: La siguiente lista sirve de menú. Está en la parte superior para que
+      quede más mano a la hora de navegar.
+    -->
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><span>Experiencia laboral y académica</span></li>
+      <li><a href="aficiones.html">Aficiones</a></li>
+    </ul>
+
+    <!-- Contenido -->
+
+    <h1>Experiencia laboral y académica</h1> <!-- Título de sección -->
+
+    <!-- HTML: Uso del elemento <table>. -->
+    <table>
+      <!-- HTML: Uso del elemento <caption> dentro de una tabla. -->
+      <caption>
+        Cronología inversa de mi experiencia laboral y mi formación
+        académica
+      </caption>
+      <tr>
+        <th>Tipo</th>
+        <th>Labores/capacidades</th>
+        <th>Empresa/centro</th>
+        <th>Periodo</th>
+      </tr>
+      <!-- CSS: Uso del atributo "style" para definir el fondo en esta fila. -->
+      <tr style="background-color: #066479;">
+        <td>Formación</td>
+        <td>
+          <!--
+            HTML: Uso de los elementos <dl>, <dt> y <dd> para mostrar
+            definiciones.
+          -->
+          <dl>
+            <dt>Desarrollo de Aplicaciones Web</dt>
+            <dd>
+              Grado Superior de FP para el desarrollo, implantación, y
+              mantenimiento de aplicaciones web.
+            </dd>
+          </dl>
+        </td>
+        <td>
+          <a href="https://labur.eus/oJROn" target="_blank">BirtLH</a>
+        </td>
+        <td style="width: fit-content;">2022 → actualidad</td>
+      </tr>
+      <tr style="background-color: #156a65;">
+        <!--
+          HTML: Uso del elemento <td> con "rowspan" para unir varias celdas.
+        -->
+        <td rowspan="5">Laboral</td>
+        <td>
+          <dl>
+            <dt>Edición y diseño editorial</dt>
+            <dd>
+              Labores de edición, maquetación, diseño de portadas, redacción
+              de textos, corrección…
+            </dd>
+          </dl>
+        </td>
+        <!-- HTML: Uso del elemento <abbr>. -->
+        <td>
+          <abbr title="Ediciones Científicas Sociedad Anónima">ECSA</abbr>
+        </td>
+        <td>2004 → actualidad</td>
+      </tr>
+      <tr style="background-color: #156a65;">
+        <td>
+          <dl>
+            <dt>Programador PHP</dt>
+            <dd>
+              Proyectos sencillos de PHP como tiendas online, mantenimiento
+              de sitios Wordpress, etc.
+            </dd>
+          </dl>
+        </td>
+        <td><i>Freelance</i></td>
+        <td>2008 → actualidad</td>
+      </tr>
+      <tr style="background-color: #156a65;">
+        <td>
+          <dl>
+            <dt>Diseñador gráfico y programador web</dt>
+            <dd>
+              Proyectos de diseño gráfico, diseño web y programación web.
+            </dd>
+          </dl>
+        </td>
+        <td>Zuma Multimedia</td>
+        <td>2006 → 2008</td>
+      </tr>
+      <tr style="background-color: #156a65;">
+        <td>
+          <dl>
+            <dt>Programador PHP</dt>
+            <dd>Proyectos de programación PHP.</dd>
+          </dl>
+        </td>
+        <td>Indra</td>
+        <td>2006 → 2006</td>
+      </tr>
+      <tr style="background-color: #156a65;">
+        <td>
+          <dl>
+            <dt>Diseño web y programación ASP/PHP</dt>
+            <dd>
+              Diseño web y programación web para diversos clientes de la
+              empresa.
+            </dd>
+          </dl>
+        </td>
+        <!-- HTML: Uso del elemento <sub> para mostrar texto en subíndice. -->
+        <td>Sistemas R<sub>2</sub>M</td>
+        <td>2002 → 2006</td>
+      </tr>
+      <tr style="background-color: #066479;">
+        <td rowspan="3" style="border-bottom: 0 none;">Formación</td>
+        <td>
+          <dl>
+            <dt>Curso programación web</dt>
+            <dd>Curso de iniciación en HTML y programación web con ASP</dd>
+          </dl>
+        </td>
+        <td>Academia Meatze (Barakaldo)</td>
+        <td>2001</td>
+      </tr>
+      <tr style="background-color: #066479;">
+        <td>
+          <dl>
+            <dt>Módulo de Diseño Gráfico</dt>
+            <dd>
+              Formación en diseño gráfico, diseño web, maquetación y
+              animación interactiva.
+            </dd>
+          </dl>
+        </td>
+        <td>Academia Anallana (Bilbao)</td>
+        <td>1999 → 2001</td>
+      </tr>
+      <tr style="background-color: #066479;">
+        <td>
+          <dl>
+            <dt>COU</dt>
+            <dd>Rama científico tecnológica.</dd>
+          </dl>
+        </td>
+        <!--
+          HTML: Uso del atributo colspan para expandir esta celda en dos
+          columnas.
+        -->
+        <!-- CSS: Uso del atributo "style" para centrar el texto del <td>. -->
+        <td colspan="2" style="text-align: center;">Colegio Askartza (Leioa)</td>
+      </tr>
+    </table>
+  </body>
+</html>

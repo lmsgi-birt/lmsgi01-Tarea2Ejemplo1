@@ -1,0 +1,188 @@
+<!--
+  Nombre: Antón López Álvarez
+  Fecha: 24/oct/2022
+  Módulo: LMSGI
+  UD: LMSGI01
+  Tarea: Tarea evaluativa 2. Primer sitio web con formato (50%)
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Cabecera -->
+    <meta charset="utf-8">
+    <meta name="description" content="CV web de Antón López">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS: Uso del fichero .css -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!--
+      CSS: Uso del elemento <style> para definir el estilo de la firma de la
+      cita ubicada tras el elemento <blockquote>
+    -->
+    <style>
+        .firma {
+          text-align: right;
+          padding: 0 40px 40px 0;
+        }
+    </style>
+    <title>Antón López - Aficiones</title>
+  </head>
+
+
+  <body>
+    <!-- Cuerpo -->
+
+    <!--
+      HTML: La siguiente lista sirve de menú. Está en la parte superior para que
+      quede más mano a la hora de navegar.
+    -->
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="experiencia.html">Experiencia laboral y académica</a></li>
+      <li><span>Aficiones</span></li>
+    </ul>
+
+    <!-- Contenido -->
+
+    <!-- HTML: Cabecera -->
+    <h1>Aficiones</h1>
+
+    <!-- Subapartado -->
+    <h2><span>Música</span></h2>
+
+    <!--
+      HTML: Uso del elemento blockquote para insertar una cita, con el atributo
+      "cite" para citar la fuente original.
+    -->
+    <blockquote cite="https://labur.eus/EnFhk">
+      <p>
+        La música es una ley moral. Le da alma al universo, alas a la mente,
+        vuelo a la imaginación, encanto a la tristeza y vida a todo.
+      </p>
+    </blockquote>
+    <p class="firma">
+      (Cita atribuida a Platón)
+    </p>
+
+    <p>
+      Me encanta escuchar música. Ha sido para mí, además, el vehículo
+      perfecto para descubrir otros fenómenos culturales. Especialmente me
+      interesan estos estilos, entre otros:
+    </p>
+    <ul class="negrita">
+      <!--
+        CSS: Uso del elemento <span> para aplicar negrita solo a ciertos textos.
+      -->
+      <li><span>Rock y subgéneros:</span>
+        <!-- HTML: Elemento <ul> anidado dentro del primer <li> -->
+        <ul>
+          <li>psicodelia</li>
+          <li>garaje</li>
+          <li><i>underground</i></li>
+          <li><i>hard rock</i></li>
+          <li>punk</li>
+          <li>nueva ola</li>
+        </ul>
+      </li>
+      <li><span>Música experimental</span></li>
+      <li><span>Bandas sonoras</span></li>
+    </ul>
+    <p>
+      <!-- HTML: Uso del elemento <sup> para emular una llamada a nota -->
+      Aquí una breve muestra de una de mis canciones favoritas<sup>*</sup>:
+    </p>
+    <!--
+      HTML: Uso de los elementos <figure> y <figcaption> para añadir un texto al
+      pie del elemento <audio>.
+    -->
+    <figure >
+      <!--
+        HTML: Uso del elemento <audio> con fuentes en diversos formatos para
+        facilitar compatibilidad en navegadores.
+      -->
+      <audio controls>
+        <source src="audio/cocteau-twins.ogg" type="application/ogg">
+        <source src="audio/cocteau-twins.wav" type="audio/x-wav">
+        <source src="audio/cocteau-twins.mp3" type="audio/mpeg">
+        <!-- HTML: Uso del elemento <code> -->
+        Tu navegador no implementa el elemento <code>audio</code>
+      </audio>
+      <!--
+        HTML: A continuación un uso del elemento <a> con el atributo
+        target="_blank" para un enlace externo que se abre en nueva ventana,
+        anidado dentro del <figcaption>.
+      -->
+      <figcaption>
+        <sup>(*)</sup> Cocteau Twins - «Fotzepolitic», del álbum
+        <a href="https://es.wikipedia.org/wiki/Heaven_or_Las_Vegas"
+            target="_blank"><i>Heaven Or Las Vegas</i></a> (1990)
+      </figcaption>
+    </figure>
+
+    <!-- HTML: Subapartado -->
+    <h2><span>Literatura</span></h2>
+    <p>
+      Últimamente leo menos, pero me interesa sobre todo la literatura europea
+      del siglo XIX, los grandes clásicos (especialmente de la literatura
+      grecolatina) y algunos autores de filosofía y de ciencia ficción.
+      <!-- HTML: Uso de elementos <br> para saltos de línea. -->
+      <br>
+      <br>
+      Estos son mis cinco libros favoritos:
+    </p>
+    <!--
+      HTML: Uso de lista ordenada <ol> de tipo "i" (números romanos en
+      minúscula).
+    -->
+    <ol type="i" class="cursiva">
+      <li><span>La ilíada</span> (Homero)</li>
+      <li><span>El Quijote</span> (Cervantes)</li>
+      <li><span>Anna Karénina</span> (Tolstoi)</li>
+      <li><span>Rojo y negro</span> (Stendhal)</li>
+      <li><span>Crimen y castigo</span> (Dostoievski)</li>
+    </ol>
+    <!--
+      HTML: Uso de elementos <figure> y <figcaption> para insertar un pie de
+      foto.
+    -->
+    <figure>
+      <img src="images/libro.jpeg" alt="Libro abierto" title="Libro abierto">
+      <figcaption>
+        <!-- HTML: Uso de lelemento <q> para insertar una cita -->
+        <q>En las tinieblas, la imaginación trabaja más activamente que a
+        plena luz</q> (KANT).
+      </figcaption>
+    </figure>
+
+    <!-- HTML: Subapartado -->
+    <h2><span>Culturas internacionales</span></h2>
+    <p>
+      Me interesan mucho las culturas del Mediterráneo, pero desde hace poco
+      me atrae sobre todo la cultura contemporánea de Japón. Suelo seguir
+      canales de <i>youtubers</i> que viven allí y enseñan los paisajes y la
+      vida cotidiana japonesa, tanto urbana como rural:
+    </p>
+    <!--
+      HTML: Uso de elementos <figure> y <figcaption> para insertar un texto al
+      pie del vídeo.
+    -->
+    <figure>
+      <!--
+        HTML: Uso del elemento <video> con el atributo poster para mostrar una
+        imagen estática mientras se carga el vídeo, el atributo "autoplay" para
+        reproducir automáticamente, "controls" para mostrar los controles por
+        si acaso el navegador bloquea por defecto el "autoplay", "loop" para
+        reproducir en bucle, y "mute" para reproducir sin sonido (aunque este
+        vídeo en concreto no tiene pista de audio).
+      -->
+      <video autoplay controls loop muted src="video/tokyo.mp4"
+          poster="images/tokyo.jpg">
+        Tu navegador no implementa el elemento <code>video</code>
+      </video>
+      <figcaption>
+        Extracto del canal de YouTube
+        <a href="https://www.youtube.com/watch?v=0nTO4zSEpOs"
+            target="_blank"><i>Virtual Japan</i></a>
+      </figcaption>
+    </figure>
+  </body>
+</html>

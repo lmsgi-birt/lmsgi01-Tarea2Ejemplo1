@@ -1,0 +1,294 @@
+/*
+  Nombre: Antón López Álvarez
+  Fecha: 24/oct/2022
+  Módulo: LMSGI
+  UD: LMSGI01
+  Tarea: Tarea evaluativa 2. Primer sitio web con formato (50%)
+*/
+
+
+/* ELEMENTOS COMUNES */
+
+/*
+  Uso de propiedades de color y fondo: color, background-color.
+  Uso de propiedades de fuente: font (style, weight, size/line-height, family).
+  Uso de propiedades del modelo de caja: margin, max-width.
+  Uso de propiedad no vista en los apuntes: max-width.
+*/
+body {
+  background-color: #022027;
+  box-sizing: border-box;
+  color: #95eae4;
+  font: normal 400 12pt/1.3 Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+a {
+  color: #95eae4;
+  text-decoration: 1px underline double;
+}
+
+/*
+  Uso de propiedad "hyphens" para activar la partición de palabras. No vista en
+  los apuntes:
+    https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens
+*/
+p {
+  hyphens: auto;
+  text-align: justify;
+}
+
+/*
+  Uso de atributos de texto: text-align, text-transform y text-decoration.
+*/
+h1 {
+  font-size: x-large;
+  margin-bottom: 70px;
+  text-align: center;
+  text-decoration: underline 1px;
+  text-transform: uppercase;
+}
+
+/* 
+  Quería hacer los bordes de los <h2> como si parecieran solapas, pero con un
+  subrayado a todo lo ancho del <body>. Para definir bordes a ras del
+  texto debía usar "display: inline" o "inline-block", pero así no podía hacer
+  el subrayado a todo lo ancho, por lo que he decidido aplicar el subrayado al
+  selector de <h2>, y los bordes a un <span> dentro de él (ver debajo).
+*/ 
+h2 {
+  border-bottom: 1px solid #95eae4;
+  font-size: large;
+  margin-top: 50px;
+}
+
+/*
+  Estilo tipo solapa para los elementos <span> dentro de <h2>. Uso de <span>.
+*/
+h2 span {
+  border: solid #95eae4;
+  border-radius: 0 20px 0 0;
+  border-width: 1px 1px 0 1px;
+  display: inline-block; /* Si lo dejamos como inline no ajusta bien el borde */
+  padding: 1px 25px 2px 15px;
+}
+
+/* Cita con sangría amplia (como en los libros) y borde lateral */
+blockquote {
+  border-left: 3px solid #95eae4;
+  font-style: italic;
+  padding: 1px 0 1px 30px;
+  margin: 50px 0 0 40%;
+}
+
+/*
+  Estilo de declaración recomendado en la guía de estilo de Google:
+    https://labur.eus/QUbXc
+*/
+img,
+audio,
+video {
+  border: 1px solid #95eae4;
+  border-radius: 5px;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+figure {
+  margin: 40px;
+  text-align: center;
+}
+
+figcaption {
+  font-size: small;
+  padding: 10px 5px;
+  text-align: left;
+}
+
+
+/* CLASE MENÚ */
+
+/*
+  Uso de clase .menu. Uso de la propiedad box-sizing para ajustar las medidas
+  aplicadas a la caja al borde exterior de la misma y que esta no se salga del
+  tamaño ancho máximo definido para <body> (800px). No vista en los apuntes:
+    https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+*/
+.menu {
+  border: solid #95eae4;
+  border-width: 0 1px 1px 1px;
+  border-radius: 0 0 10px 10px;
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0 auto 40px;
+  padding: 10px 40px 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.menu li {
+  display: inline;
+  padding: 0 10px;
+}
+
+/*
+  Uso de span para aplicar un borde fijo solo al elemento activo del menú.
+*/
+.menu span {
+  border: 1px solid #95eae4;
+  border-radius: 5px;
+  padding: 1px 5px 3px;
+}
+
+/*
+  Uso de la propiedad "transition" para generar un efecto de transformación
+  progresiva entre dos estados. No vista en los apuntes:
+    https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+*/
+.menu a {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: inherit;
+  padding: 1px 5px 3px;
+  text-decoration: none;
+  transition: all 0.1s ease-in;
+}
+
+/*
+  Uso de "transition" y de la pseudoclase ":hover" para activar el efecto de
+  transición entre el estilo de "reposo" de <a> (borde transparente) y el estilo
+  aplicado al pasar el ratón sobre dicho elemento (borde con color). No vista en
+  los apuntes:
+    https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+*/
+.menu a:hover {
+  border: 1px solid #95eae4;
+  transition: all 0.2s ease-in;
+}
+
+
+/* TABLA EXPERIENCIA */
+
+/*
+  Se define el borde de la tabla pero solo se le da radio a las esquinas
+  inferiores, puesto que las superiores serán las del elemento <caption>.
+*/
+table {
+  border: 1px solid #95eae4;
+  border-spacing: 0;
+  border-radius: 0 0 5px 5px;
+  margin: 70px 0;
+  width: 100%;
+}
+
+/*
+  Se usa primero la propiedad abreviada "border" para definir valores comunes,
+  y luego "border-width" para no aplicar el borde al lado inferior. Se redondean
+  solo las esquinas superiores, las inferiores son de <table>.
+*/
+caption {
+  border: solid #95eae4;
+  border-radius: 5px 5px 0 0;
+  border-width: 1px 1px 0 1px;
+  font-size: small;
+  padding: 10px;
+}
+
+/*
+  Aquí se añaden los bordes interiores de la tabla, usando los bordes derechos
+  e inferiores de cada celda, puesto que la tabla ya tiene un borde exterior.
+*/
+th,
+td {
+  border: solid #95eae4;
+  border-width: 0 1px 1px 0;
+  hyphens: auto;
+  padding: 5px 15px;
+  text-align: justify;
+}
+
+/*
+  Se da fondo negro a la fila de cabecera y de paso se enmienda el text-align
+  definido aquí arriba, para que esté centrado en lugar de justificado.
+*/
+th {
+  background-color: black;
+  text-align: center;
+}
+
+/*
+  Uso de la pseudoclase ":last-child" para definir como cero el borde derecho de
+  la última columna (para que no se duplique con el borde de la propia tabla).
+  Se aprovecha también para forzar el ancho de esa columna y para centrar su
+  contenido. No se ha visto en los apuntes:
+    https://developer.mozilla.org/es/docs/Web/CSS/:last-child
+*/
+td:last-child,
+th:last-child {
+  border-right: 0;
+  text-align: center;
+  width: 160px;
+}
+
+/*
+  Los <td> de la última fila van sin borde inferior para no duplicar el borde
+  exterior de <table>.
+*/
+tr:last-child td {
+  border-bottom: 0 none;
+}
+
+
+/* OTRAS CLASES */
+
+/*
+  Uso de la clase .negrita para sustituir las negritas que estaban en HTML. Se
+  usa <span> para activar la clase solo en ciertos textos dentro del elemento
+  que recibe la clase, sin tener que repetir el atributo de clase en cada
+  <span>. Se incluye al selector de <dt> para que tome también este valor.
+*/
+.negrita span,
+dt {
+  font-weight: 800;
+}
+
+/*
+  Igual que la anterior pero para las cursivas. Se incluye al selector de <dd>.
+*/
+.cursiva span,
+dd {
+  font-style: italic;
+}
+
+/*
+  Uso de la clase .fotoautor para dar estilo al <img> de mi foto.
+  Disposición en modo de inline-block: He usado inline-block para permitir que
+  la caja de la foto y la del párrafo de introducción aparezcan en la misma
+  línea.
+*/
+.fotoautor {
+  border: 5px solid;
+  border-radius: 50%;
+  display: inline-block;
+  height:120px;
+  width:120px;
+}
+
+/*
+  Uso de la clase .intro para colocar el párrafo introductorio junto a la foto
+  del autor. He usado "max-width" para que el párrafo no se extienda al ancho
+  completo, empujando hacia abajo el elemento.
+  La indentación del HTML genera un espacio entre la foto y el párrafo, por eso
+  la suma de los anchos del párrafo y su margen, más el de la imagen y su borde,
+  no da los 800px que debería dar.
+*/
+.intro {
+  display: inline-block;
+  text-align: left;
+  hyphens: none;
+  margin: 3px 0 0 20px;
+  max-width: 640px;
+  vertical-align: top;
+}

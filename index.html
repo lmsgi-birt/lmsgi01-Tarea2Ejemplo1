@@ -1,0 +1,70 @@
+<!--
+  Nombre: Antón López Álvarez
+  Fecha: 24/oct/2022
+  Módulo: LMSGI
+  UD: LMSGI01
+  Tarea: Tarea evaluativa 2. Primer sitio web con formato (50%)
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Cabecera -->
+    <meta charset="utf-8">
+    <meta name="description" content="CV web de Antón López">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS: Uso del fichero .css -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Antón López - Inicio</title> <!-- Título -->
+  </head>
+
+  <body>
+    <!-- Cuerpo -->
+
+    <!--
+      HTML: La siguiente lista sirve de menú. Está en la parte superior para que
+      quede más mano a la hora de navegar.
+    -->
+
+    <!--
+      HTML: Uso del elemento <ul> ya sin atributo "title" pues el tooltip ya no
+      es necesario para facilitar el primer uso por convención visual.
+    -->
+    <ul class="menu">
+      <!-- HTML Uso del elemento <li> (list item) -->
+      <!--
+        CSS: Uso del elemento <span> para distinguir el estilo del ítem activo
+        en el menú.
+      -->
+      <li><span>Inicio</span></li>
+      <!-- HTML: Uso del elemento <a> anidado en un <li> -->
+      <li><a href="experiencia.html">Experiencia laboral y académica</a></li>
+      <li><a href="aficiones.html">Aficiones</a></li>
+    </ul>
+
+    <!-- Contenido -->
+
+    <!-- Título de apartado -->
+    <h1>Inicio</h1>
+
+    <!-- Uso del elemento <img> -->
+    <img class="fotoautor" src="images/foto.png" alt="Foto de Antón López">
+    <p class="intro"> <!-- Uso del elemento <p> -->
+      ¡Hola! Estás navegando por mi curriculum web. Utiliza el menú superior
+      para obtener información sobre mi experiencia laboral, mi formación y
+      mis aficiones.
+      <br>
+      <br>
+      Si deseas contactar conmigo no dudes en utilizar las vías descritas a
+      continuación.
+    </p>
+    <h2><span>Datos personales</span></h2>
+    <ul class="negrita">
+      <li><span>Nombre completo</span>: Antón López</li>
+      <li>
+        <span>Correo electrónico</span>: <a href="mailto:anton@example.net">
+        anton@example.net</a>
+      </li>
+      <li><span>Teléfono</span>: 666 999 666</li>
+    </ul>
+  </body>
+</html>
